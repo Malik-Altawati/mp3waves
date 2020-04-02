@@ -13,6 +13,8 @@ cloudinary.config({
 });
 ///// upload a Song
 router.post("/upload", (req, res) => {
+  res.setHeader("Content-Type", "text/html");
+
   form.parse(req, (err, fields, files) => {
     var title = fields.title;
     var artist = fields.artist || "Uknown Artist";
@@ -59,10 +61,10 @@ router.post("/upload", (req, res) => {
         artist
       })
         .then(song => {
-          res.status(200).send(song);
+          return res.status(200).send(song);
         })
         .catch(err => {
-          console.log(err);
+          return console.log(err);
           //  res.sendStatus(503)
         });
     };
