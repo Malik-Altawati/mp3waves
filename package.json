@@ -1,0 +1,19 @@
+{
+  "name": "mp3waves",
+  "version": "1.0.0",
+  "description": "music library",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malik-Altawati/mp3waves.git"
+  },
+  "author": "malik-altawati",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Malik-Altawati/mp3waves/issues"
+  },
+  "homepage": "https://github.com/Malik-Altawati/mp3waves#readme"
+}
