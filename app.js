@@ -25,5 +25,10 @@ app.use("/user", require("./routes/user"));
 app.get("/play", (req, res) => {
   res.sendFile("C:/Users/atlas libya/Desktop/mp3waves/public/play.html");
 });
+app.get("/admin", (req, res) => {
+  res.sendFile(
+    "C:/Users/atlas libya/Desktop/mp3waves/public/admin/upload.html"
+  );
+});
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, console.log(`Server is running on port ${PORT}`));

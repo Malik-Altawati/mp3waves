@@ -16,12 +16,15 @@ router.post("/upload", (req, res) => {
   res.setHeader("Content-Type", "text/html");
 
   form.parse(req, (err, fields, files) => {
-    var title = fields.title.toLowerCase();
-    var artist = fields.artist.toLowerCase();
+    var title = fields.title;
+    var artist = fields.artist;
     var song = files.song;
     var img = files.img;
     var song_link;
     var img_link;
+    console.log(artist, title);
+    console.log("********************************");
+    console.log(song);
 
     let upload_img = () => {
       return new Promise((Resolve, Reject) => {
@@ -69,7 +72,7 @@ router.post("/upload", (req, res) => {
         });
     };
 
-    finish();
+    // finish();
   });
 });
 
