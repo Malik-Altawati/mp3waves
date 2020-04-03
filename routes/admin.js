@@ -16,8 +16,8 @@ router.post("/upload", (req, res) => {
   res.setHeader("Content-Type", "text/html");
 
   form.parse(req, (err, fields, files) => {
-    var title = fields.title;
-    var artist = fields.artist || "Uknown Artist";
+    var title = fields.title.toLowerCase();
+    var artist = fields.artist.toLowerCase();
     var song = files.song;
     var img = files.img;
     var song_link;

@@ -21,10 +21,23 @@ router.get("/", (req, res) =>
 router.get("/search", (req, res) => {
   const { query } = req.query;
   Song.findAll({
-    where: { title: { [Op.like]: "%" + query + "%" } },
+    where: {
+      [Op.or]: [
+        { title: { [Op.like]: "%" + query + "%" } },
+        { artist: { [Op.like]: "%" + query + "%" } }
+      ]
+    },
     limit: 15,
     order: [["id", "DESC"]]
   })
+    /*
+  where: {
+    [Op.or]: [
+      { title: { [Op.like]: "%" + query + "%" } },
+      { artist: { [Op.like]: "%" + query + "%" } }
+    ]
+  }
+  */
     .then(Songs => {
       res.status(200).send(Songs);
     })
