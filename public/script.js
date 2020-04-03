@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 var searchBtn = document.getElementById("search-btn");
-var search = document.getElementById("search");
+var search = document.getElementById("search").toLowerCase();
 searchBtn.addEventListener("click", function(e) {
   e.preventDefault();
 
