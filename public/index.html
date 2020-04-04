@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="/">MP3WAVES</a>
         <button
           class="navbar-toggler"
@@ -63,8 +63,22 @@
     </header>
     <section class="py-2 px-2 bg-light text-dark center-text">
       <div id="show" class="container"></div>
+      <table class="table text-align-center">
+        <thead>
+          <tr>
+            <th scope="col">Avatar</th>
+            <th scope="col">Artist</th>
+            <th scope="col">Title</th>
+            <th scope="col">View</th>
+          </tr>
+        </thead>
+        <tbody id="row">
+          <!-- data is loaded here-->
+        </tbody>
+      </table>
+      <br />
     </section>
-    <footer class="bg-dark" style="height: 50px;">
+    <footer class="bg-dark fixed-bottom" style="height: 50px;">
       <div
         class="text-light d-flex align-items-center justify-content-center"
         style="height: 50px;"
